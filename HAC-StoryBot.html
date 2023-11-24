@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAC 60th Anniversary Chatbot</title>
+    <style>
+       
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.chatbot-container {
+    position: fixed;
+    top: 20px; /* Positioned at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for precise centering */
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.chatbot-header {
+    background-color: #cb4b16; /* Brick orange color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatbot-sub-header {
+    color: #333;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.chatbot-widget {
+    height: auto;
+}
+
+       
+    </style>
+</head>
+<body>
+
+<div class="chatbot-container">
+    <div class="chatbot-header">
+        Celebrating HAC 60th Anniversary
+    </div>
+    <div class="chatbot-sub-header">
+        Hi, I'm HAC StoryBot, ask me about what you want to know about HAC. Tap to start chatting with me!
+    </div>
+    <div id="mendable-component" class="chatbot-widget"></div>
+</div>
+
+<script src="https://unpkg.com/@mendable/search@0.0.108/dist/umd/mendable-bundle.min.js"></script>
+<script>
+    Mendable.initialize({
+        anon_key: '2aa7be22-c3d7-49da-8409-3443f98e7670', // Replace with your actual key
+        type: "searchBar",
+        elementId: "mendable-component"
+    });
+</script>
+
+</body>
+</html>
+
